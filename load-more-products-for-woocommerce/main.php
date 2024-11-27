@@ -63,7 +63,7 @@ class BeRocket_LMP extends BeRocket_Framework {
                 'use_wpml'                  => '0',
             ),
             'br_lmp_button_settings'    => array(
-                'button_text'               => __('Load More', 'BeRocket_LMP_domain'),
+                'button_text'               => 'Load More',
                 'custom_class'              => '',
                 'background-color'          => '#aaaaff',
                 'color'                     => '#333333',
@@ -108,7 +108,7 @@ class BeRocket_LMP extends BeRocket_Framework {
             ),
             'br_lmp_prev_settings'    => array(
                 'enable_prev'               => '0',
-                'button_text'               => __('Load Previous', 'BeRocket_LMP_domain'),
+                'button_text'               => 'Load Previous',
                 'custom_class'              => '',
                 'background-color'          => '#aaaaff',
                 'color'                     => '#333333',
@@ -164,9 +164,9 @@ class BeRocket_LMP extends BeRocket_Framework {
                 'animation'                 => '',
             ),
             'br_lmp_messages_settings'  => array(
-                'loading'                   => __('Loading...', 'BeRocket_LMP_domain'),
+                'loading'                   => 'Loading...',
                 'loading_class'             => '',
-                'end_text'                  => __('No more products', 'BeRocket_LMP_domain'),
+                'end_text'                  => 'No more products',
                 'end_text_class'            => '',
             ),
             'br_lmp_javascript_settings'=> array(
@@ -394,7 +394,7 @@ class BeRocket_LMP extends BeRocket_Framework {
     }
     
     public function list_grid_compatibility( $user_func ) {
-        $options = get_option('br_load_more_products');
+        $options = $this->get_option();
         $selectors_options = $options['br_lmp_selectors_settings'];
         $item_selector = $selectors_options['item'];
         $after_set = 'jQuery(window).scrollTop(jQuery(window).scrollTop() + 1).scrollTop(jQuery(window).scrollTop() - 1);';
@@ -1205,7 +1205,7 @@ class BeRocket_LMP extends BeRocket_Framework {
                     <li>' . __('Wait until end <strong style="color:red;">do not close this page</strong>', 'BeRocket_LMP_domain') . '</li>
                     <li>' . __('Save settings with new selectors', 'BeRocket_LMP_domain') . '</li>
                 </ol>
-                ' . BeRocket_wizard_generate_autoselectors(array('products' => '.lmp_button_selector_products', 'product' => '.lmp_button_selector_item', 'pagination' => '.lmp_button_selector_pagination', 'next_page' => '.lmp_button_selector_next_page', 'prev_page' => '.lmp_button_selector_prev_page'), array(), $output_text) . '
+                ' . BeRocket_wizard_generate_autoselectors_v2(array('products' => '.lmp_button_selector_products', 'product' => '.lmp_button_selector_item', 'pagination' => '.lmp_button_selector_pagination', 'next_page' => '.lmp_button_selector_next_page', 'prev_page' => '.lmp_button_selector_prev_page'), array(), $output_text) . '
             </td>
         </tr><tr>';
         return $html;

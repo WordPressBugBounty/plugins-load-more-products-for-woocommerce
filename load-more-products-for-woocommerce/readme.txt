@@ -4,8 +4,8 @@ Contributors: berocket, dholovnia
 Donate link: https://berocket.com/woocommerce-load-more-products/?utm_source=wordpress_org&utm_medium=donate&utm_campaign=BeRocket_LMP
 Tags: load more, load more products, ajax products loading, woocommerce load more products, more products, woocommerce load products, infinite scroll, infinite scrolling, pagination, scrolling, scroll, endless, ajax pagination, infinite pagination, infinite, lazy load, lazy loading, endless scroll, ajax load posts, ajax load more, ajax load more products, woocommerce ajax load more, simple load more, infinite scroll button, load more button, get more products, berocket, berocket load more products for woocommerce
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.2.1
+Tested up to: 6.7
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,12 @@ Load More Products for WooCommerce has been tested and compatibility is certain 
 ---
 
 == Changelog ==
+
+= 1.2.2 =
+* Enhancement - Compatibility version: Wordpress 6.7 and WooCommerce 9.4
+* Fix - Translation init errors with WordPress 6.7
+* Fix - Error with incorrect settings
+* Fix - Autoselectors functionality
 
 = 1.2.1 =
 * Enhancement - Compatibility version: WooCommerce 9.3
