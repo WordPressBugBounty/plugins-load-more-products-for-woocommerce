@@ -68,7 +68,7 @@ if( class_exists('BeRocket_admin_bar_plugin_data') ) {
                                 if( $pagination.find(the_lmp_js_data.next_page).length > 0 ) {
                                     $next_page = $pagination.find(the_lmp_js_data.next_page);
                                 } else {
-                                    $next_page = $( the_lmp_js_data.next_page );
+                                    $next_page = jQuery( the_lmp_js_data.next_page );
                                 }
                                 var next_page = $next_page.length;
                                 var error = false;

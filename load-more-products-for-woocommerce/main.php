@@ -29,6 +29,16 @@ class BeRocket_LMP extends BeRocket_Framework {
         array('br_lmp_javascript_settings', 'before_update'),
         array('br_lmp_javascript_settings', 'after_update'),
     );
+    public $import_export = array(
+        'br_lmp_javascript_settings' => array(
+            'before_update' => array(
+                'export_type' => 'remove'
+            ),
+            'after_update' => array(
+                'export_type' => 'remove'
+            )
+        )
+    );
 
     function __construct () {
         $this->info = array(
@@ -49,140 +59,86 @@ class BeRocket_LMP extends BeRocket_Framework {
             'plugin_dir'  => __DIR__,
         );
 
-        $this->defaults = array(
-            'br_lmp_general_settings'   => array(
-                'type'                      => 'infinity_scroll',
-                'update_url'                => '',
-                'use_mobile'                => '',
-                'mobile_type'               => 'more_button',
-                'mobile_width'              => '767',
-                'choose_loading'            => 'icons',
-                'loading_image'             => 'fa-spinner',
-                'rotate_image'              => '1',
-                'buffer'                    => '50',
-                'use_wpml'                  => '0',
-            ),
-            'br_lmp_button_settings'    => array(
-                'button_text'               => 'Load More',
-                'custom_class'              => '',
-                'background-color'          => '#aaaaff',
-                'color'                     => '#333333',
-                'border-color'              => '#000',
-                'font-size'                 => '22',
-                'padding-left'              => '25',
-                'padding-right'             => '25',
-                'padding-top'               => '15',
-                'padding-bottom'            => '15',
-                'hover'                     => array(
-                    'background-color'          => '#9999ff',
-                    'color'                     => '#111111',
+        $this->defaults = array (
+            'br_lmp_button_settings' => array (
+                'button_text' => 'Load More',
+                'custom_class' => '',
+                'background-color' => '#aaaaff',
+                'color' => '#333333',
+                'border-color' => '#000',
+                'font-size' => '22',
+                'padding-left' => '25',
+                'padding-right' => '25',
+                'padding-top' => '15',
+                'padding-bottom' => '15',
+                'hover' => array (
+                    'background-color' => '#9999ff',
+                    'color' => '#111111',
                 ),
-                'color'                     => '#333333',
-                'font-size'                 => '22',
-                'hover'                     => array(
-                    'color'                     => '#111111',
-                ),
-                'background-color'          => '#aaaaff',
-                'color'                     => '#333333',
-                'border-color'              => '#000',
-                'padding-left'              => '25',
-                'padding-right'             => '25',
-                'padding-top'               => '15',
-                'padding-bottom'            => '15',
-                'margin-right'              => '',
-                'margin-top'                => '',
-                'margin-bottom'             => '',
-                'margin-left'               => '',
-                'border-right'              => '',
-                'border-top'                => '',
-                'border-bottom'             => '',
-                'border-left'               => '',
-                'border-top-left-radius'    => '',
-                'border-top-right-radius'   => '',
+                'margin-right' => '',
+                'margin-top' => '',
+                'margin-bottom' => '',
+                'margin-left' => '',
+                'border-right' => '',
+                'border-top' => '',
+                'border-bottom' => '',
+                'border-left' => '',
+                'border-top-left-radius' => '',
+                'border-top-right-radius' => '',
                 'border-bottom-left-radius' => '',
-                'border-bottom-right-radius'=> '',
-                'hover'                     => array(
-                    'background-color'          => '#9999ff',
-                    'color'                     => '#111111',
-                ),
+                'border-bottom-right-radius' => '',
             ),
-            'br_lmp_prev_settings'    => array(
-                'enable_prev'               => '0',
-                'button_text'               => 'Load Previous',
-                'custom_class'              => '',
-                'background-color'          => '#aaaaff',
-                'color'                     => '#333333',
-                'border-color'              => '#000',
-                'font-size'                 => '22',
-                'padding-left'              => '25',
-                'padding-right'             => '25',
-                'padding-top'               => '15',
-                'padding-bottom'            => '15',
-                'hover'                     => array(
-                    'background-color'          => '#9999ff',
-                    'color'                     => '#111111',
+            'br_lmp_prev_settings' => array (
+                'enable_prev' => '',
+                'button_text' => 'Load Previous',
+                'custom_class' => '',
+                'background-color' => '#aaaaff',
+                'color' => '#333333',
+                'border-color' => '#000',
+                'font-size' => '22',
+                'padding-left' => '25',
+                'padding-right' => '25',
+                'padding-top' => '15',
+                'padding-bottom' => '15',
+                'hover' => array (
+                    'background-color' => '#9999ff',
+                    'color' => '#111111',
                 ),
-                'color'                     => '#333333',
-                'font-size'                 => '22',
-                'hover'                     => array(
-                    'color'                     => '#111111',
-                ),
-                'background-color'          => '#aaaaff',
-                'color'                     => '#333333',
-                'border-color'              => '#000',
-                'padding-left'              => '25',
-                'padding-right'             => '25',
-                'padding-top'               => '15',
-                'padding-bottom'            => '15',
-                'margin-right'              => '',
-                'margin-top'                => '',
-                'margin-bottom'             => '',
-                'margin-left'               => '',
-                'border-right'              => '',
-                'border-top'                => '',
-                'border-bottom'             => '',
-                'border-left'               => '',
-                'border-top-left-radius'    => '',
-                'border-top-right-radius'   => '',
+                'margin-right' => '',
+                'margin-top' => '',
+                'margin-bottom' => '',
+                'margin-left' => '',
+                'border-right' => '',
+                'border-top' => '',
+                'border-bottom' => '',
+                'border-left' => '',
+                'border-top-left-radius' => '',
+                'border-top-right-radius' => '',
                 'border-bottom-left-radius' => '',
-                'border-bottom-right-radius'=> '',
-                'hover'                     => array(
-                    'background-color'          => '#9999ff',
-                    'color'                     => '#111111',
-                ),
+                'border-bottom-right-radius' => '',
             ),
-            'br_lmp_selectors_settings' => array(
-                'products'                  => 'ul.products',
-                'item'                      => 'li.product',
-                'pagination'                => '.woocommerce-pagination',
-                'next_page'                 => '.woocommerce-pagination a.next',
-                'prev_page'                 => '.woocommerce-pagination a.prev',
+            'br_lmp_general_settings' => array (
+                'type' => 'infinity_scroll',
+                'update_url' => '',
+                'use_mobile' => '',
+                'choose_loading' => '',
+                'loading_image' => 'fa-spinner',
+                'rotate_image' => '1',
+                'buffer' => '50',
+                'use_wpml' => '',
             ),
-            'br_lmp_lazy_load_settings' => array(
-                'use_lazy_load'             => '',
-                'use_lazy_load_mobile'      => '',
-                'animation'                 => '',
+            'br_lmp_selectors_settings' => array (
+                'products' => 'ul.products',
+                'item' => 'li.product',
+                'pagination' => '.woocommerce-pagination',
+                'next_page' => '.woocommerce-pagination a.next',
+                'prev_page' => '.woocommerce-pagination a.prev',
             ),
-            'br_lmp_messages_settings'  => array(
-                'loading'                   => 'Loading...',
-                'loading_class'             => '',
-                'end_text'                  => 'No more products',
-                'end_text_class'            => '',
-            ),
-            'br_lmp_javascript_settings'=> array(
-                'before_update'             => '',
-                'after_update'              => '',
-            ),
-            'br_lmp_license_settings'   => array(
-                'plugin_key'                => '',
+            'br_lmp_javascript_settings' => array (
+                'before_update' => '',
+                'after_update' => '',
             ),
             'custom_css' => '',
-            'fontawesome_frontend_disable'    => '',
-            'fontawesome_frontend_version'    => '',
-            'script'     => array(
-                'js_page_load'      => '',
-            ),
-            'plugin_key' => '',
         );
 
         $this->values = array(
@@ -601,13 +557,6 @@ class BeRocket_LMP extends BeRocket_Framework {
                         array('value' => 'more_pagination', 'text' => __('Load More Button + AJAX Pagination', 'BeRocket_LMP_domain')),
                     ),
                     "value"    => 'infinity_scroll',
-                ),
-                'framework_products_per_page' => array(
-                    "label"     => __( 'Products per page', "BeRocket_LMP_domain" ),
-                    "type"      => "number",
-                    "name"      => "framework_products_per_page",
-                    "value"     => '',
-                    'extra'     => 'placeholder="'.__( 'From WooCommerce', "BeRocket_LMP_domain" ).'"'
                 ),
                 'load_image' => array(
                     "label"     => __( 'Loading Image', 'BeRocket_LMP_domain' ),
@@ -1082,24 +1031,6 @@ class BeRocket_LMP extends BeRocket_Framework {
             ),
             'Selectors' => $Selectors,
             'JavaScript/CSS'     => array(
-                'global_font_awesome_disable' => array(
-                    "label"     => __( 'Disable Font Awesome', "BeRocket_LMP_domain" ),
-                    "type"      => "checkbox",
-                    "name"      => "fontawesome_frontend_disable",
-                    "value"     => '1',
-                    'label_for' => __('Don\'t loading css file for Font Awesome on site front end. Use it only if you doesn\'t uses Font Awesome icons in widgets or you have Font Awesome in your theme.', 'BeRocket_LMP_domain'),
-                ),
-                'global_fontawesome_version' => array(
-                    "label"    => __( 'Font Awesome Version', "BeRocket_LMP_domain" ),
-                    "name"     => "fontawesome_frontend_version",
-                    "type"     => "selectbox",
-                    "options"  => array(
-                        array('value' => '', 'text' => __('Font Awesome 4', 'BeRocket_LMP_domain')),
-                        array('value' => 'fontawesome5', 'text' => __('Font Awesome 5', 'BeRocket_LMP_domain')),
-                    ),
-                    "value"    => '',
-                    "label_for" => __('Version of Font Awesome that will be used on front end. Please select version that you have in your theme', 'BeRocket_LMP_domain'),
-                ),
                 array(
                     "type"  => "textarea",
                     "label" => __( "Custom CSS", "BeRocket_LMP_domain" ),
