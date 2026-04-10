@@ -5,7 +5,7 @@ Donate link: https://berocket.com/woocommerce-load-more-products/?utm_source=wor
 Tags: load more, ajax load more, infinite scroll, ajax pagination, lazy load
 Requires at least: 5.0
 Tested up to: 6.9.3
-Stable tag: 1.2.3.5
+Stable tag: 1.2.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Load More Products for WooCommerce has been tested and compatibility is certain 
 —
 
 == Changelog ==
+
+= 1.2.3.6 =
+* Enhancement - Compatibility with other BeRocket plugins
+* Fix - Updater PHP error
 
 = 1.2.3.5 =
 * Enhancement - Compatibility version: Wordpress 6.9.3 and WooCommerce 10.6

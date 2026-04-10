@@ -3,6 +3,13 @@
 .br_setup_wizard td,
 .br_setup_wizard tr{
     border: none!important;
+    background: transparent!important;
+    box-shadow: none!important;
+}
+
+.br_setup_wizard table select {
+    margin: 0;
+    margin-left: 10px;
 }
 
 .berocket_wizard_autoselectors .berocket_autoselect_spin,
@@ -368,6 +375,18 @@
     font-weight: bold;
     margin: 20px 0;
 }
+.br_setup_wizard .wizard_end_content {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: justify;
+}
+.br_setup_wizard .wizard_end_content h2 {
+    text-align: center;
+}
+.br_setup_wizard .wizard_end_content .wizard_end_video {
+    text-align: center;
+}
 
 .br_setup_wizard .wizard_filters_create .framework-form-table tbody { 
     display: grid;
@@ -375,6 +394,13 @@
 }
 .wizard_filters_create .brwizard_create_filters_td > span {
     display: block;
+}
+.br_setup_wizard .next-step .button {
+    vertical-align: top;
+    padding: 10px 30px !important;
+    margin: 10px 10px 10px 0 !important;
+    font-size: 18px !important;
+    line-height: 1.5em !important;
 }
 .br_setup_wizard .next-step .button:disabled,
 .br_setup_wizard .next-step a.brwiz_disabled_links {
