@@ -10,6 +10,7 @@ foreach (glob(plugin_dir_path( __FILE__ ) . "includes/compatibility/*.php") as $
 {
     include_once($filename);
 }
+include_once(plugin_dir_path( __FILE__ ) . "includes/admin/funnels.php");
 /*
  * Class BeRocket_LMP
  * REPLACE

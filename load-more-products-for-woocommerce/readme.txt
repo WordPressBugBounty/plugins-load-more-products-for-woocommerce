@@ -4,8 +4,8 @@ Contributors: berocket, dholovnia
 Donate link: https://berocket.com/woocommerce-load-more-products/?utm_source=wordpress_org&utm_medium=donate&utm_campaign=BeRocket_LMP
 Tags: load more, ajax load more, infinite scroll, ajax pagination, lazy load
 Requires at least: 5.0
-Tested up to: 6.9.3
-Stable tag: 1.2.3.6
+Tested up to: 6.9.4
+Stable tag: 1.2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,11 @@ Load products from next page via AJAX with infinite scrolling or load more produ
 == Description ==
 
 Load products from next page via AJAX with infinite scrolling or load more products button
+
+= 🚀 Spring Premium Days is LIVE! =
+**Save 30%** on Pro features across BeRocket plugins. 
+*Adapt product loading behavior for mobile and desktop to deliver the best browsing experience on every device. A custom loading image keeps customers engaged and reinforces your brand while products load.*
+🌿 Improve your store today. [**Limited time offer!**](https://berocket.com/woocommerce-load-more-products/?utm_source=free_plugin&utm_medium=wporg&utm_campaign=spring_2026&utm_content=top_ad_cta&utm_term=BeRocket_LMP)
 
 = Features: =
 &#9989; Infinite Scroll for WooCommerce Products
@@ -68,6 +73,10 @@ Load More Products for WooCommerce has been tested and compatibility is certain 
 —
 
 == Changelog ==
+
+= 1.2.3.7 =
+* Enhancement - Compatibility version: Wordpress 6.9.4 and WooCommerce 10.6.2
+* Fix - PHP warning in admin area
 
 = 1.2.3.6 =
 * Enhancement - Compatibility with other BeRocket plugins
