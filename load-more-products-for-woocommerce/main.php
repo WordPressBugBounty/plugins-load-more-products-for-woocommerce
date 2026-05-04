@@ -10,6 +10,10 @@ foreach (glob(plugin_dir_path( __FILE__ ) . "includes/compatibility/*.php") as $
 {
     include_once($filename);
 }
+if( ( ! defined("BLMP_VER_PAID_DISABLE") || ! BLMP_VER_PAID_DISABLE ) && file_exists(__DIR__ . "/paid/paid.php") ) {
+    include_once(__DIR__ . "/paid/tripwire.php");
+    include_once(__DIR__ . "/paid/paid.php");
+}
 include_once(plugin_dir_path( __FILE__ ) . "includes/admin/funnels.php");
 /*
  * Class BeRocket_LMP
